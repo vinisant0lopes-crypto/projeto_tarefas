@@ -40,7 +40,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d71111',
+    backgroundColor: '#636262',
     alignItems: 'center',
     padding: 20,
   },
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   btnAdicionar:{
     width: "90%",
-    backgroundColor: "#cc1b1b",
+    backgroundColor: "#ff0000",
     margin: 15,
     height: 40,
     borderRadius: 5,
