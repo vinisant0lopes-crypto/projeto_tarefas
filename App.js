@@ -1,14 +1,17 @@
-import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View, } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
 
-  const tarefas =[
+  const [tarefas,setTarefas] = useState([
     {id:"1",titulo:"aprender Git"},
     {id:"2",titulo:"aprender fazer commit"},
     {id:"3",titulo:"aprender utilizar GitHub"},
-    {id:"3",titulo:"Criar um novo commit"},
+    {id:"4",titulo:"Criar um novo commit"},
+  ])
 
-  ]
+  const [novaTarefa,setnovaTarefa] = useState('')
+
   return (
     <View style={styles.container}>
 
