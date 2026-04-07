@@ -12,6 +12,15 @@ export default function App() {
 
   const [novaTarefa,setnovaTarefa] = useState('')
 
+  function addTarefa(){
+
+    const task = [{
+      id : String(Date.now()),
+      titulo : novaTarefa
+    }]
+
+  }
+
   return (
     <View style={styles.container}>
 
@@ -30,9 +39,13 @@ export default function App() {
    
    
    />
-   <TextInput style={styles.input}
+   <TextInput 
+   style={styles.input}
+   value={novaTarefa}
+   onChangeText= { (texto)=> setnovaTarefa(texto) }
    placeholder="Digite uma tarefa"
-   textAlign='center'></TextInput>
+   textAlign='center'
+   />
 
    <TouchableOpacity style={styles.btnAdicionar}>
     <Text>Adicionar Tarefa</Text>
