@@ -71,19 +71,19 @@ const styles = StyleSheet.create({
   titulo:{
     fontSize:48,
     fontWeight:'bold',
-    color:'black',
+    color:'white',
     marginBottom:20,
   },
   items:{
     color:'black',
     padding:15,
     marginTop:10,
-    backgroundColor:'#e82a2a',
+    backgroundColor:'cyan',
     borderRadius:5,
   },
   btnAdicionar:{
     width: "90%",
-    backgroundColor: "#ff0000",
+    backgroundColor: "cyan",
     margin: 15,
     height: 40,
     borderRadius: 5,
