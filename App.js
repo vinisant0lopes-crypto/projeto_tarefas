@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 export default function App() {
 
+  const [task,setTask] = useState('')
+
   const [tarefas,setTarefas] = useState([
     {id:"1",titulo:"aprender Git"},
     {id:"2",titulo:"aprender fazer commit"},
@@ -10,21 +12,25 @@ export default function App() {
     {id:"4",titulo:"Criar um novo commit"},
   ])
 
-  const [novaTarefa,setnovaTarefa] = useState('')
 
-  function addTarefa(){
 
-    const task = [{
+  function addTarefas(){
+
+    const novaTarefa = {
       id : String(Date.now()),
-      titulo : novaTarefa
-    }]
+      titulo : task
+    };
+
+   setTarefas([...tarefas,novaTarefa]);
+   setTask("")
+  
 
   }
 
   return (
     <View style={styles.container}>
 
-      <Text style={styles.titulo}>lista de tarefas</Text>
+      <Text style={styles.titulo}>Lista de tarefas</Text>
       
  
 
@@ -41,13 +47,13 @@ export default function App() {
    />
    <TextInput 
    style={styles.input}
-   value={novaTarefa}
-   onChangeText= { (texto)=> setnovaTarefa(texto) }
+   value={task}
+   onChangeText= { (texto)=> setTask(texto) }
    placeholder="Digite uma tarefa"
    textAlign='center'
    />
 
-   <TouchableOpacity style={styles.btnAdicionar}>
+   <TouchableOpacity onPress={addTarefas} style={styles.btnAdicionar}>
     <Text>Adicionar Tarefa</Text>
    </TouchableOpacity>
     </View>
